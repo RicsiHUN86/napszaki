@@ -48,10 +48,50 @@ namespace napszak
             Console.WriteLine("Nyomj egy gombot a kilépéshez...");
             Console.ReadKey();
         }
+        public static void sebesseg()
+        {
+            double kezdoSebesseg;
+
+            do
+            {
+                Console.Write("Add meg a kezdő sebességet (m/s) 3.00 és 5.00 között: ");
+                kezdoSebesseg = Convert.ToDouble(Console.ReadLine());
+
+                if (kezdoSebesseg < 3.00 || kezdoSebesseg > 5.00)
+                {
+                    Console.WriteLine("A sebességnek 3.00 és 5.00 m/s között kell lennie. Próbáld újra.");
+                }
+
+            } while (kezdoSebesseg < 3.00 || kezdoSebesseg > 5.00);
+
+            Console.WriteLine("Sebességek 10 méterenként (km/h-ban):");
+
+            double aktualisSebesseg = kezdoSebesseg;
+
+            for (int tav = 0; tav <= 100; tav += 10)
+            {
+                if (tav <= 50)
+                {
+                    aktualisSebesseg += 0.2; 
+                }
+                else if (tav >= 90)
+                {
+                    aktualisSebesseg -= 0.2;
+                }
+
+                double sebessegKmH = aktualisSebesseg * 3.6;
+
+                Console.WriteLine($"{tav} méternél: {sebessegKmH} km/h");
+            }
+
+            Console.WriteLine("Nyomj egy gombot a kilépéshez...");
+            Console.ReadKey();
+        }
         static void Main(string[] args)
         {
             koszon();
             kamat();
+            sebesseg();
         }
     }
 }
