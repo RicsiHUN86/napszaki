@@ -29,9 +29,29 @@ namespace napszak
                 Console.WriteLine("Jó éjszakát!");
             }
         }
+
+       public static void kamat()
+        {
+            Console.Write("Add meg a lekötni kívánt összeget (HUF): ");
+            double osszeg = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Add meg a lekötés időtartamát (években): ");
+            int evek = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Add meg a kamatlábat (%): ");
+            double kamatLab = Convert.ToDouble(Console.ReadLine());
+
+            double vegosszeg = osszeg * Math.Pow((1 + kamatLab / 100), evek);
+
+            Console.WriteLine("A megadott idő elteltével a végösszeg: {vegosszeg} HUF");
+
+            Console.WriteLine("Nyomj egy gombot a kilépéshez...");
+            Console.ReadKey();
+        }
         static void Main(string[] args)
         {
             koszon();
+            kamat();
         }
     }
 }

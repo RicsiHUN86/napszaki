@@ -1,0 +1,7 @@
+C:\Users\barnari\gitwork\napszak\bin\Debug\napszak.exe.config
+C:\Users\barnari\gitwork\napszak\bin\Debug\napszak.exe
+C:\Users\barnari\gitwork\napszak\bin\Debug\napszak.pdb
+C:\Users\barnari\gitwork\napszak\obj\Debug\napszak.csproj.AssemblyReference.cache
+C:\Users\barnari\gitwork\napszak\obj\Debug\napszak.csproj.CoreCompileInputs.cache
+C:\Users\barnari\gitwork\napszak\obj\Debug\napszak.exe
+C:\Users\barnari\gitwork\napszak\obj\Debug\napszak.pdb
