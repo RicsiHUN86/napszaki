@@ -8,7 +8,7 @@ namespace napszak
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void koszon()
         {
             DateTime currentTime = DateTime.Now;
 
@@ -28,6 +28,10 @@ namespace napszak
             {
                 Console.WriteLine("Jó éjszakát!");
             }
+        }
+        static void Main(string[] args)
+        {
+            koszon();
         }
     }
 }
